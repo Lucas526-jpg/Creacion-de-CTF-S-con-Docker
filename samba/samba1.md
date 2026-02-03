@@ -5,7 +5,7 @@
 ![Samba](https://img.shields.io/badge/Samba-yellow?style=for-the-badge&logo=linux&logoColor=black)
 ![Security](https://img.shields.io/badge/Security-CTF-red?style=for-the-badge)
 
-Este proyecto documenta la creación de un CTF de nivel introductorio, explotando una configuración insegura en el servicio **Samba** sobre un contenedor **Ubuntu**.
+Este proyecto documenta la creación de un CTF de nivel muy facil, explotando una configuración insegura en el servicio **Samba** sobre un contenedor **Ubuntu**.
 
 ---
 
