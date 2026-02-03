@@ -97,10 +97,10 @@ añadimos las siguientes líneas al final del archivo. Esta configuración hace 
 ```bash
 [Aqui_esta_la_bandera]
    path = /srv/samba/bandera
-   browsable = yes    ; #se muestra en la lista de recursos(lo veremos en la fase de prueba)
-   writable = yes     ; #permite escritura
-   guest ok = yes     ; #permite acceso sin contraseña (invitado)
-   read only = no     ; #asegura que no sea solo lectura
+   browsable = yes    #se muestra en la lista de recursos(lo veremos en la fase de prueba)
+   writable = yes     #permite escritura
+   guest ok = yes     #permite acceso sin contraseña (invitado)
+   read only = no     #asegura que no sea solo lectura
 ```
 
 una vez añadido nuestra configuracion, guardamos y salimos
