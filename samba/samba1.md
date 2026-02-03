@@ -2,10 +2,10 @@
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Samba](https://img.shields.io/badge/Samba-Video_Share-yellow?style=for-the-badge&logo=linux&logoColor=black)
+![Samba](https://img.shields.io/badge/Samba-yellow?style=for-the-badge&logo=linux&logoColor=black)
 ![Security](https://img.shields.io/badge/Security-CTF-red?style=for-the-badge)
 
-Este proyecto documenta la creación un CTF de nivel introductorio, explotando una configuración insegura en el servicio **Samba** sobre un contenedor **Ubuntu**.
+Este proyecto documenta la creación de un CTF de nivel introductorio, explotando una configuración insegura en el servicio **Samba** sobre un contenedor **Ubuntu**.
 
 ---
 
@@ -163,6 +163,57 @@ de vuelta en nuestra máquina local, leemos el trofeo:
 ```bash
 cat flag.txt
 ```
+
+## Guardar imagen del ctf
+
+es necesario para poder exportarla luego, aunque ademas sirve como un "guardado", lo haremos con el siguiente comando:
+
+```bash
+sudo docker commit ID-DEL-CONTENEDOR nombreDeLaImagen:latest
+```
+
+al hacerlo, podremos ver que tendremos la imagen con el comando:
+
+```bash
+sudo docker images
+```
+## Creacion del DockerFile
+
+ahora creamos un docker file con el siguiente comando:
+
+```bash
+nano Dockerfile
+```
+
+en el, pondremos el nombre de la imagen que sera la base de nuestra ctf, que fue la que creamos con el commit, pondremos el nombre de esta forma:
+
+```bash
+FROM nombreDeLaImagen:latest
+```
+
+luego, iniciaremos los servicios que instalamos, en este caso, son los dos necesarios para que samba funcione, de la siguiente forma:
+
+```bash
+CMD service smbd start && service nmbd start && tail -f /dev/null
+```
+
+guardamos y contruimos una nueva imagen con el dockerfile y la imagen del commit que realizamos(para mas comodad, en la terminal ubicate donde este tu dockerfile):
+
+```bash
+docker build --t nombreDeLaImagenNueva .
+```
+
+el "." indica que el dockerfile esta en la misma carpeta desde donde se ejecuta el comando, si no estamos en la misma carpeta, debemos poner su direccion
+
+## Exportarlo como .tar y compartirlo
+
+una vez creada la imagen nueva, tocara exportarla como .tar, con el siguiente comando:
+
+```bash
+docker save -o nombreDeLaImagenNueva.tar nombreDeLaImagenNueva:latest
+```
+
+es importante que aqui la imagen y el archivo.tar tengan los mismos nombres, o dara error al momeno de ejecutarlo con el .sh
 
 ## 📝 Notas
 * Browsability: Configurar browsable = yes facilita la enumeración para el atacante.
