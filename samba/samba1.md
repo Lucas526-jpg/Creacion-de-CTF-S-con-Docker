@@ -1,4 +1,4 @@
-# 🚩 CTF Challenge: Samba "Very Easy"
+# 🚩 CTF : Samba "Muy facil"
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
