@@ -12,6 +12,6 @@ Este repositorio tendra como fin documentar mis aprendizajes y guiar a los que e
 
 | Nivel | Servicio | Descripción | Enlace a la Guía |
 | :---: | :---: | :--- | :---: |
-| 🟢 **Muy Fácil** | **Samba (SMB)** | Despliegue de un contenedor Ubuntu con un share SMB mal configurado (Acceso Anónimo y Permisos de Escritura). | [**Ver Guía Paso a Paso**](https://github.com/Lucas526-jpg/Creacion-de-CTF-S-con-Docker/blob/main/samba/samba1.md) 👈 |
+| 🟢 **Muy Fácil** | **Samba (SMB)** | Despliegue de un contenedor Ubuntu con un servicio SMB mal configurado (Acceso Anónimo y Permisos de Escritura). | [**Ver Guía Paso a Paso**](https://github.com/Lucas526-jpg/Creacion-de-CTF-S-con-Docker/blob/main/samba/samba1.md) 👈 |
 
 ---
